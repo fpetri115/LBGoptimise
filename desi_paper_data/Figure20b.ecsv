@@ -1,0 +1,16 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: VI_z, datatype: float32}
+# - {name: frac_Qgt2, datatype: float32}
+# - {name: frac_Qge2, datatype: float32}
+# delimiter: ','
+# schema: astropy-2.0
+VI_z,frac_Qgt2,frac_Qge2
+2.1,0.0,0.045
+2.3,0.524,0.244
+2.5,1.684,0.81
+2.7,1.783,1.051
+2.9,0.698,0.552
+3.1,1.304,0.968
+3.3,2.111,1.9

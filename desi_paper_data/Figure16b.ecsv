@@ -1,0 +1,14 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: EWLya, datatype: float32}
+# - {name: dEWLya, datatype: float32}
+# - {name: EWSi4, datatype: float32}
+# - {name: dEWSi4, datatype: float32}
+# delimiter: ','
+# schema: astropy-2.0
+EWLya,dEWLya,EWSi4,dEWSi4
+-14.28,0.59,-1.14,0.13
+-3.98,0.34,-1.03,0.09
+12.91,0.22,-1.1,0.13
+32.17,0.74,-1.12,0.17
