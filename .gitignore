@@ -1,3 +1,4 @@
 *.npy
+*.fits
 
 /saved_models
