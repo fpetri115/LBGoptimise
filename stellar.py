@@ -6,12 +6,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sedpy import observate
 
-
 def get_xsl_LSST_colours():
     """return LSST colours of XSL stars. Removes stars
     that give NAN in photometry"""
     filenames = select_approriate_xsl_files()
-    bands = load_lsst_filters("./")
+    bands = tools.load_lsst_filters("./")
 
     photometry = []
     for file in filenames:
@@ -69,14 +68,3 @@ def load_spectrum(filename):
     #flux_error = data_table[:, 3]
 
     return wavelengths, flux
-
-def load_lsst_filters(path):
-    """gets filters for sed-py observate for calculating photometry
-    """
-    filters = []
-    for band in ['u', 'g', 'r', 'i', 'z', 'y']:
-        filter_data = np.genfromtxt(path+'lsst_filters/total_'+band+'.dat', skip_header=7, delimiter=' ')
-        filter_data[:, 0] = filter_data[:, 0]*10 #covert to angstroms
-        filters.append(observate.Filter("lsst_"+band, data=(filter_data[:, 0], filter_data[:, 1])))
-    
-    return filters
